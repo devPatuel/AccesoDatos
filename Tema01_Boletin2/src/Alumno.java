@@ -5,6 +5,9 @@ public class Alumno {
     private LocalDate fechaNacimiento;
 
     public Alumno(String nia, String nombre, String apellido1, String apellido2, LocalDate fechaNacimiento){
+
+        // Correciones: No hace falta los getters
+        // HashCode y Equals , toString implementats.
         this.nia = nia;
         this.nombre = nombre;
         this.apellido1 = apellido1;

@@ -1,0 +1,9 @@
+20250002,Ana,López,Martínez,2003-12-01
+20250003,Pedro,Sánchez,Ruiz,2005-01-20
+20250004,Laura,Fernández,Torres,2004-07-15
+20250005,Marcos,Gómez,Hernández,2003-11-30
+20250006,Lucía,Díaz,Morales,2004-09-25
+20250007,Sergio,Romero,Castro,2005-02-05
+20250008,Paula,Ortega,Jiménez,2004-04-18
+20250009,Daniel,Navarro,Serrano,2003-08-12
+20250010,Elena,Vega,Domínguez,2005-06-22

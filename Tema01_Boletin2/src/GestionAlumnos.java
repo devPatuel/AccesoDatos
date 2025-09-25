@@ -49,7 +49,7 @@ public class GestionAlumnos {
                 Files.delete(file.toPath());
                 Files.move(fileTemporal.toPath(), file.toPath());
     }
-
+        // Evitar el RunTimeException
     public String toString() {
         StringBuilder sb = new StringBuilder();
         try(BufferedReader bfr = new BufferedReader(new FileReader(file))){
