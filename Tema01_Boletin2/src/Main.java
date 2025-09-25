@@ -1,4 +1,5 @@
 import java.io.*;
+import java.time.LocalDate;
 
 public class Main {
     public static void leerDni(String archivo1) throws IOException {
@@ -43,6 +44,22 @@ public class Main {
     // Nuevo archivo concat dnis y letras.
     public static void main(String[] args) throws Exception {
         leerDni("C:\\Users\\pocap\\OneDrive\\Escritorio\\AccesoDatos\\Tema01_Boletin2\\src\\Dnis.txt");
+        GestionAlumnos obj = new GestionAlumnos("Alumnos.txt");
+        Alumno[] alumnos = {
+                new Alumno("20250001", "Jordi", "Patuel", "García", LocalDate.of(2004, 5, 10)),
+                new Alumno("20250002", "Ana", "López", "Martínez", LocalDate.of(2003, 12, 1)),
+                new Alumno("20250003", "Pedro", "Sánchez", "Ruiz", LocalDate.of(2005, 1, 20)),
+                new Alumno("20250004", "Laura", "Fernández", "Torres", LocalDate.of(2004, 7, 15)),
+                new Alumno("20250005", "Marcos", "Gómez", "Hernández", LocalDate.of(2003, 11, 30)),
+                new Alumno("20250006", "Lucía", "Díaz", "Morales", LocalDate.of(2004, 9, 25)),
+                new Alumno("20250007", "Sergio", "Romero", "Castro", LocalDate.of(2005, 2, 5)),
+                new Alumno("20250008", "Paula", "Ortega", "Jiménez", LocalDate.of(2004, 4, 18)),
+                new Alumno("20250009", "Daniel", "Navarro", "Serrano", LocalDate.of(2003, 8, 12)),
+                new Alumno("20250010", "Elena", "Vega", "Domínguez", LocalDate.of(2005, 6, 22))
+        };
+            obj.insertarAlumnos(alumnos); // Inserto los alumnos
+            obj.eliminarAlumno(alumnos[0]); // Elimino 1 alumno
+            System.out.println(obj.toString());
     }
 }
 
