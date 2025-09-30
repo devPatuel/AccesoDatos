@@ -4,6 +4,13 @@ import java.util.Properties;
 import java.util.Scanner;
 
 public class Menu {
+    /**
+     * Muestra el primer menú del programa y gestiona el acceso al sistema.
+     * Si el usuario valida correctamente la contraseña, accede al segundo menú.
+     *
+     * @throws NoSuchAlgorithmException si ocurre un error al generar o validar el hash.
+     * @throws IOException si ocurre un error al leer o escribir el archivo de propiedades.
+     */
     public void primerMenu() throws NoSuchAlgorithmException, IOException {
         Scanner scanner = new Scanner(System.in);
         int seleccion = -1;
@@ -23,7 +30,15 @@ public class Menu {
 
         scanner.close();
     }
-
+    /**
+     * Comprueba si existe el archivo de propiedades con el hash de la contraseña.
+     * Si no existe, crea uno con una contraseña por defecto ("S3cret@").
+     * Solicita al usuario que introduzca la contraseña hasta que sea válida.
+     *
+     * @return true cuando el acceso ha sido validado correctamente.
+     * @throws NoSuchAlgorithmException si ocurre un error al validar el hash.
+     * @throws IOException si ocurre un error al acceder al archivo de propiedades.
+     */
     private boolean introducirPassword() throws NoSuchAlgorithmException, IOException {
         Scanner scanner = new Scanner(System.in);
         File file = new File("datos.properties");
@@ -54,7 +69,13 @@ public class Menu {
         while (!accesoValido);
         return true;
     }
-
+    /**
+     * Muestra el segundo menú del programa tras validar el acceso.
+     * Permite al usuario modificar la contraseña o salir del programa.
+     *
+     * @throws IOException si ocurre un error al leer o escribir en el archivo.
+     * @throws NoSuchAlgorithmException si ocurre un error al generar o validar hashes.
+     */
     public void segundoMenu() throws IOException, NoSuchAlgorithmException {
         Scanner scanner = new Scanner(System.in);
         int seleccion = -1;
@@ -74,7 +95,14 @@ public class Menu {
         {
         }
     }
-
+    /**
+     * Permite al usuario cambiar la contraseña almacenada.
+     * Solicita la contraseña actual y una nueva, y actualiza el hash en el archivo.
+     * Repite el proceso hasta que el cambio se realice correctamente.
+     *
+     * @throws IOException si ocurre un error al acceder al archivo de propiedades.
+     * @throws NoSuchAlgorithmException si ocurre un error al generar o validar el hash.
+     */
     public void modificarContra() throws IOException, NoSuchAlgorithmException {
         Scanner scanner = new Scanner(System.in);
         File file = new File("datos.properties");
