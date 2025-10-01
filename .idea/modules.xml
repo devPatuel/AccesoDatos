@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/AccesoDatos.iml" filepath="$PROJECT_DIR$/.idea/AccesoDatos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LibreriaJordi/LibreriaJordi.iml" filepath="$PROJECT_DIR$/LibreriaJordi/LibreriaJordi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tema01_Boletin02.iml" filepath="$PROJECT_DIR$/Tema01_Boletin02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Tema01_Boletin02.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Tema01_Boletin02.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Tema01_Boletin02.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Tema01_Boletin02.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tema01_Boletin1/Tema01_Boletin1.iml" filepath="$PROJECT_DIR$/Tema01_Boletin1/Tema01_Boletin1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tema01_Boletin2/Tema01_Boletin2.iml" filepath="$PROJECT_DIR$/Tema01_Boletin2/Tema01_Boletin2.iml" />
+    </modules>
+  </component>
+</project>
