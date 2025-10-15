@@ -1,8 +1,8 @@
-package org.example.Ejercicio02;
+package org.example.Ejercicio01;
 
 import java.io.*;
 import java.nio.file.Files;
-import org.example.Ejercicio01.Alumno;
+
 
 public class GestionAlumnos {
     private File file;

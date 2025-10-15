@@ -1,8 +1,11 @@
 package org.example.Ejercicio01;
 
-import org.example.Ejercicio02.GestionAlumnos;
-
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.time.LocalDate;
 
 public class Main {
@@ -47,7 +50,7 @@ public class Main {
 
     // Nuevo archivo concat dnis y letras.
     public static void main(String[] args) throws Exception {
-        leerDni("C:\\Users\\pocap\\OneDrive\\Escritorio\\AccesoDatos\\Tema01_Boletin2\\src\\Dnis.txt");
+        leerDni("Dnis.txt");
         GestionAlumnos obj = new GestionAlumnos("Alumnos.txt");
         Alumno[] alumnos = {
                 new Alumno("20250001", "Jordi", "Patuel", "García", LocalDate.of(2004, 5, 10)),

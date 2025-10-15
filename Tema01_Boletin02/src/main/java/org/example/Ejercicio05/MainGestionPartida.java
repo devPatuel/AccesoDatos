@@ -16,7 +16,7 @@ public class MainGestionPartida {
         int puntuacionO = 1;
 
 
-        GestionPartida partida = new GestionPartida(tablero,jugadorActual,puntuacionX,puntuacionO);
+        GestionPartida partida = new GestionPartida(tablero, jugadorActual, puntuacionX, puntuacionO);
         GameStorage.guardar(partida, archivo);
 
         GestionPartida partidaRecuperada = GameStorage.cargar("partida.data");

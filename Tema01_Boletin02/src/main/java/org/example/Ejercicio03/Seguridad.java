@@ -1,7 +1,11 @@
 package org.example.Ejercicio03;
 
+import org.example.Ejercicio04.Usuario;
+import com.google.gson.Gson;
+
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -16,7 +20,7 @@ public class Seguridad {
      * @throws NoSuchAlgorithmException Si el algoritmo no está disponible
      */
     public static String generarHash(String password) throws NoSuchAlgorithmException {
-        // Crea un objeto aplicando el algoritmo SHA-1
+        // Crea un objeto aplicando el algoritmo SHA-256
         MessageDigest md = MessageDigest.getInstance("SHA-256");
         // Convierte el texto a bytes
         byte[] bytes = md.digest(password.getBytes());
@@ -96,8 +100,9 @@ public class Seguridad {
         return true;
     }
 
-    public static boolean cambiarHashJson(String actual, String nueva, Properties props, File archivo) throws IOException, NoSuchAlgorithmException {
-        String hashGuardado = props.getProperty("passwordHash");
+    public static boolean cambiarhashJson(String actual, String nueva, Usuario usuario, File archivo) throws IOException, NoSuchAlgorithmException {
+        String hashGuardado = usuario.getPasswordHash();
+        Gson gson = new Gson();
 
         if (!validarHash(actual, hashGuardado)) {
             return false;
@@ -108,13 +113,10 @@ public class Seguridad {
         }
 
         String nuevoHash = generarHash(nueva);
-        props.setProperty("passwordHash", nuevoHash);
-
-        try (FileOutputStream fos = new FileOutputStream(archivo)) {
-            props.store(fos, "Contraseña actualizada");
+        usuario.setPasswordHash(nuevoHash);
+        try (FileWriter fw = new FileWriter(archivo)){
+            gson.toJson(usuario, fw);
         }
         return true;
     }
 }
-
-

@@ -10,13 +10,13 @@ public class GestionPartida implements Serializable {
     private int puntuacionO;
 
 
-
     public GestionPartida(char[][] tablero, char jugadorActual, int puntuacionX, int puntuacionO) {
         this.tablero = tablero;
         this.jugadorActual = jugadorActual;
         this.puntuacionX = puntuacionX;
         this.puntuacionO = puntuacionO;
     }
+
     public char[][] getTablero() {
         return tablero;
     }
