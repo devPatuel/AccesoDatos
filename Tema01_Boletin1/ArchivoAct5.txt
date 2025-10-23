@@ -1,7 +1,0 @@
-Hola esto es una prueba
-el metodo leera liinea por linea
-El contenido de este archivo
-
-12341234
-.,-.ç+`´
-Fin

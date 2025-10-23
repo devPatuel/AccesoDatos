@@ -1,1 +1,0 @@
-rootProject.name = "Tema01_Boletin02"
